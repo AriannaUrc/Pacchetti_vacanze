@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacchetti_vacanze", "Pacchetti_vacanze\Pacchetti_vacanze.csproj", "{EFAC1D93-358B-4ED7-94F3-5B7A867B7204}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFAC1D93-358B-4ED7-94F3-5B7A867B7204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFAC1D93-358B-4ED7-94F3-5B7A867B7204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFAC1D93-358B-4ED7-94F3-5B7A867B7204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFAC1D93-358B-4ED7-94F3-5B7A867B7204}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9002E38-CC31-4826-8F72-8D4C0C1D52DD}
+	EndGlobalSection
+EndGlobal
