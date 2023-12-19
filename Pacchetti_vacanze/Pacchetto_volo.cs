@@ -40,7 +40,7 @@ namespace Pacchetti_vacanze
         }
 
         //metodi equals
-        public override bool Equals(Pacchetto_volo cmp)
+        public bool Equals(Pacchetto_volo cmp)
         {
             if (Destinazione == cmp.Destinazione && Durata == cmp.Durata && CostoBase == cmp.CostoBase && VoloRitorno == cmp.VoloRitorno)
             {
@@ -65,7 +65,7 @@ namespace Pacchetti_vacanze
 
         public override string ToString() 
         {
-            return base.ToString() + " " + VoloRitorno;
+            return base.ToString() + " VoloRitorno: " + VoloRitorno;
         }
     }
 }

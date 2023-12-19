@@ -78,7 +78,7 @@ namespace Pacchetti_vacanze
         //overrride di string
         public override string ToString()
         {
-            return Destinazione + " " + Durata + " " + CostoBase;
+            return "destinazione: " + Destinazione + " Durata: " + Durata + " CostoBase: " + CostoBase;
         }
     }
 }

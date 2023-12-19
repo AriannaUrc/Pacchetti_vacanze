@@ -6,41 +6,37 @@ using System.Threading.Tasks;
 
 namespace Pacchetti_vacanze
 {
-    internal class Pacchetto_pasto : Pacchetto_base
+    internal class Pacchetto_escursione : Pacchetto_pasto
     {
-        private bool _pensioneComp;
+        private int _numEscursioni;
 
-        public bool PensioneComp
+        public int NumEscursioni
         {
-            get { return _pensioneComp; }
-            set { _pensioneComp = value;}
+            get { return _numEscursioni; }
+            set {
+                if(value>0) { _numEscursioni = value; }
+                else { _numEscursioni = 0; }
+            }
         }
 
-        public Pacchetto_pasto() : base()
+        public Pacchetto_escursione() : base()
         {
             PensioneComp = false;
         }
 
-        public Pacchetto_pasto(bool voloRitorno, string destinazione, int durata, float costoBase) : base(destinazione, durata, costoBase)
+        public Pacchetto_escursione(int escursioni, bool voloRitorno, string destinazione, int durata, float costoBase) : base(voloRitorno, destinazione, durata, costoBase)
         {
-            PensioneComp = voloRitorno;
+            NumEscursioni = escursioni;
         }
 
 
         public override float CalcolaPrezzo()
         {
-            if(!PensioneComp)
-            {
-                return (base.CalcolaPrezzo() + 25*Durata);
-            }
-            else
-            {
-                return (base.CalcolaPrezzo() + 35*Durata);
-            }
+            return base.CalcolaPrezzo() + base.CalcolaPrezzo()*NumEscursioni*15/100;
         }
 
         //metodi equals
-        public bool Equals(Pacchetto_pasto cmp)
+        public bool Equals(Pacchetto_escursione cmp)
         {
             if (Destinazione == cmp.Destinazione && Durata == cmp.Durata && CostoBase == cmp.CostoBase && PensioneComp == cmp.PensioneComp)
             {
@@ -53,8 +49,8 @@ namespace Pacchetti_vacanze
         public override bool Equals(object obj)
         {
             // Controllo se oggetto è un pacchetto base
-            if (obj is Pacchetto_pasto)
-                return Equals((Pacchetto_pasto)obj);
+            if (obj is Pacchetto_escursione)
+                return Equals((Pacchetto_escursione)obj);
             return false;
         }
 
@@ -65,7 +61,7 @@ namespace Pacchetti_vacanze
 
         public override string ToString() 
         {
-            return base.ToString() + " PensioneCompleta: " + PensioneComp;
+            return base.ToString() + " NumEscursioni: " + PensioneComp;
         }
     }
 }

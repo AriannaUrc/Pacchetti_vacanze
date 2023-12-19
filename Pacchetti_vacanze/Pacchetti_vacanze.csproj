@@ -53,6 +53,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Pacchetto_base.cs" />
+    <Compile Include="Pacchetto_escursione.cs" />
     <Compile Include="Pacchetto_pasto.cs" />
     <Compile Include="Pacchetto_volo.cs" />
     <Compile Include="Program.cs" />
