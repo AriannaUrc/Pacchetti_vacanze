@@ -16,5 +16,16 @@ namespace Pacchetti_vacanze
         {
             InitializeComponent();
         }
-    }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        /*if(ThisArray[1] is Shape.Polygon)
+        {
+            (ThisArray[1] as Shape.Polygon).Sides
+        }*/
+}
 }

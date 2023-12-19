@@ -12,7 +12,6 @@ namespace Pacchetti_vacanze
         private string _destinazione;
         private int _durata;
         private float _costoBase;
-        private float _costoVendita;
 
         public string Destinazione
         {
@@ -32,18 +31,12 @@ namespace Pacchetti_vacanze
             set { if (value > 0) { _costoBase = value; } else { _costoBase = 0; } }
         }
 
-        public float CostoVendita
-        {
-            get { return _costoVendita; }
-            set { if (value > 0) { _costoVendita = value; } else { _costoVendita = 0; } }
-        }
 
         public Pacchetto_base() 
         {
             Destinazione = "";
             Durata = 0;
             CostoBase = 0;
-            CostoVendita = 0;
         }
 
         public Pacchetto_base(string destinazione, int durata, float costoBase)
@@ -51,18 +44,17 @@ namespace Pacchetti_vacanze
             Destinazione = destinazione;
             Durata = durata;
             CostoBase = costoBase;
-            CostoVendita = CalcolaPrezzo();
         }
 
-        public float CalcolaPrezzo()
+        public virtual float CalcolaPrezzo()
         {
             return CostoBase;
         }
 
         //metodi equals
-        public bool Equals(Pacchetto_base cmp)
+        public virtual bool Equals(Pacchetto_base cmp)
         {
-            if (Destinazione == cmp.Destinazione && Durata == cmp.Durata && CostoBase == cmp.CostoBase && CostoVendita == cmp.CostoVendita)
+            if (Destinazione == cmp.Destinazione && Durata == cmp.Durata && CostoBase == cmp.CostoBase)
             {
                 return true;
             }
@@ -80,13 +72,13 @@ namespace Pacchetti_vacanze
 
         public override int GetHashCode()
         {
-            return Destinazione.GetHashCode() + Durata.GetHashCode() + CostoBase.GetHashCode() + CostoVendita.GetHashCode();
+            return base.GetHashCode();
         }
 
         //overrride di string
         public override string ToString()
         {
-            return Destinazione + " " + Durata + " " + CostoBase + " " + CostoVendita;
+            return Destinazione + " " + Durata + " " + CostoBase;
         }
     }
 }
