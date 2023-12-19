@@ -47,6 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.listView2 = new System.Windows.Forms.ListView();
             this.max_min_button1 = new System.Windows.Forms.Button();
+            this.media_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // pensione_checkbox
@@ -135,7 +136,7 @@
             // 
             // add_base_button
             // 
-            this.add_base_button.Location = new System.Drawing.Point(577, 71);
+            this.add_base_button.Location = new System.Drawing.Point(474, 50);
             this.add_base_button.Name = "add_base_button";
             this.add_base_button.Size = new System.Drawing.Size(88, 23);
             this.add_base_button.TabIndex = 10;
@@ -145,7 +146,7 @@
             // 
             // add_volo_button1
             // 
-            this.add_volo_button1.Location = new System.Drawing.Point(577, 108);
+            this.add_volo_button1.Location = new System.Drawing.Point(474, 87);
             this.add_volo_button1.Name = "add_volo_button1";
             this.add_volo_button1.Size = new System.Drawing.Size(88, 23);
             this.add_volo_button1.TabIndex = 11;
@@ -155,7 +156,7 @@
             // 
             // add_pastp_button
             // 
-            this.add_pastp_button.Location = new System.Drawing.Point(577, 147);
+            this.add_pastp_button.Location = new System.Drawing.Point(474, 126);
             this.add_pastp_button.Name = "add_pastp_button";
             this.add_pastp_button.Size = new System.Drawing.Size(88, 23);
             this.add_pastp_button.TabIndex = 12;
@@ -165,7 +166,7 @@
             // 
             // add_esc_button
             // 
-            this.add_esc_button.Location = new System.Drawing.Point(577, 188);
+            this.add_esc_button.Location = new System.Drawing.Point(474, 167);
             this.add_esc_button.Name = "add_esc_button";
             this.add_esc_button.Size = new System.Drawing.Size(88, 23);
             this.add_esc_button.TabIndex = 13;
@@ -221,11 +222,22 @@
             this.max_min_button1.UseVisualStyleBackColor = true;
             this.max_min_button1.Click += new System.EventHandler(this.max_min_button1_Click);
             // 
+            // media_button
+            // 
+            this.media_button.Location = new System.Drawing.Point(653, 108);
+            this.media_button.Name = "media_button";
+            this.media_button.Size = new System.Drawing.Size(88, 23);
+            this.media_button.TabIndex = 19;
+            this.media_button.Text = "Prezzo_medio";
+            this.media_button.UseVisualStyleBackColor = true;
+            this.media_button.Click += new System.EventHandler(this.media_button_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.media_button);
             this.Controls.Add(this.max_min_button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.listView2);
@@ -274,6 +286,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.Button max_min_button1;
+        private System.Windows.Forms.Button media_button;
     }
 }
 

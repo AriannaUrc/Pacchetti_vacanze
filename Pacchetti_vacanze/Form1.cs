@@ -91,5 +91,21 @@ namespace Pacchetti_vacanze
             }
             
         }
+
+        private void media_button_Click(object sender, EventArgs e)
+        {
+            if (dim > 0)
+            {
+                float sum = 0;
+
+                for (int i = 0; i < dim; i++)
+                {
+                    sum += offerte[i].CalcolaPrezzo();
+                }
+
+                float size = dim;
+                MessageBox.Show((sum / size).ToString());
+            }
+        }
     }
 }
